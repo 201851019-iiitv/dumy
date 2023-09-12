@@ -1,0 +1,7 @@
+com/example/utility/WalletKafkaDto.class
+com/example/utility/CommonConstants.class
+com/example/utility/NotificationKafkaDto.class
+com/example/utility/UserIdentifier.class
+com/example/utility/UserKafkaDTO.class
+com/example/utility/TxnKafkaDTO.class
+com/example/utility/WalletUpdateStatus.class
