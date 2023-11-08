@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "9cb5859c-7786-4fc2-b55c-0bbb5deea771",
+		"name": "EWallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"pavan\",\r\n    \"phoneNumber\":\"9777793210\",\r\n    \"email\":\"pavan@gmail.com\",\r\n    \"password\":\"pavan123\",\r\n    \"dob\":\"16/07/2000\",\r\n    \"country\":\"India\",\r\n    \"userIdentifier\":\"PAN\",\r\n    \"identifierValue\":\"K4753114448\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6001/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/transact?receiverNumber=8008217893&purpose=cofee&amount=20&senderNumber=8008217822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transact"
+					],
+					"query": [
+						{
+							"key": "receiverNumber",
+							"value": "8008217893"
+						},
+						{
+							"key": "purpose",
+							"value": "cofee"
+						},
+						{
+							"key": "amount",
+							"value": "20"
+						},
+						{
+							"key": "senderNumber",
+							"value": "8008217822"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/transact?receiverNumber=8008217893&purpose=cofee&amount=20&senderNumber=8008217822",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transact"
+					],
+					"query": [
+						{
+							"key": "receiverNumber",
+							"value": "8008217893"
+						},
+						{
+							"key": "purpose",
+							"value": "cofee"
+						},
+						{
+							"key": "amount",
+							"value": "20"
+						},
+						{
+							"key": "senderNumber",
+							"value": "8008217822"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ambesh123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ambesh123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
