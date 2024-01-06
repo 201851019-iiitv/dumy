@@ -24,6 +24,7 @@ public class UserController {
     @PostMapping("/user")
     public ResponseEntity<String> createUser(@RequestBody @Valid UserCreateRequest userCreateRequest) throws JsonProcessingException {
         userService.create(userCreateRequest);
+        System.out.println("User created successfully");
         return new ResponseEntity<>("Successfully created the user",HttpStatus.OK);
     }
 
